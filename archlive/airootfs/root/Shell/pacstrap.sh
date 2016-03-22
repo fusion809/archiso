@@ -30,7 +30,13 @@ function langn {
   echo "What language locale do you wish your PC to use? e.g., This ISO uses en_US.UTF-8."
   read LOCALE
   echo "LANG=$LOCALE" >> /mnt/etc/locale.conf
+}
+
+function cpf {
   cp -a /etc/pacman2.conf /mnt/etc/pacman.conf
+  cp -a /usr/local/bin/chroot-install.sh /mnt/usr/local/bin/chroot-install.sh
+  cp -a /usr/local/bin/quick-install.sh /mnt/usr/local/bin/quick-install.sh
+  cp -a /etc/locale2.gen /mnt/etc/locale2.gen
 }
 
 function achroot {
@@ -40,6 +46,7 @@ function achroot {
   Then uncomment any locales you want in /etc/locale.gen (by removing the hashtag # before them) and run `locale-gen`.\n
   Optionally you can set your keymap or font preferences in /etc/vconsole.conf, edit your /etc/mkinitcpio.conf file (after which you should run\n
   `mkinitcpio -p linux`), set the root password (by running `passwd`), set up your user accounts (by running `useradd -m -g $USERNAME`),\n
-  install a desktop environment (with `pacman -S $META` where `$META` is the name of the DEs metapackage), etc.'
+  install a desktop environment (with `pacman -S $META` where `$META` is the name of the DEs metapackage), etc.\n\n
+  An automated installer script is at /usr/local/bin/chroot-install.sh'
   arch-chroot /mnt /bin/bash
 }
