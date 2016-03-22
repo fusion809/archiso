@@ -15,7 +15,7 @@ fi
 echo "Do you want my locales, which are Australia-centric? [y/n]"
 read yn2
 if [[ $yn2 == y ]]; then
-  cp -a /etc/locale2.gen /etc/locale.gen
+  mv /etc/locale2.gen /etc/locale.gen
   locale-gen
 elif [[ $yn2 == n ]]; then
   rm /etc/locale2.gen

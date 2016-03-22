@@ -34,8 +34,8 @@ function langn {
 
 function cpf {
   cp -a /etc/pacman2.conf /mnt/etc/pacman.conf
-  cp -a /usr/local/bin/chroot-install.sh /mnt/usr/local/bin/chroot-install.sh
-  cp -a /usr/local/bin/quick-install.sh /mnt/usr/local/bin/quick-install.sh
+  cp -a /usr/local/bin/chroot-config.sh /mnt/usr/local/bin/chroot-config.sh
+  cp -a /usr/local/bin/quick-config.sh /mnt/usr/local/bin/quick-config.sh
   cp -a /etc/locale2.gen /mnt/etc/locale2.gen
 }
 
@@ -47,6 +47,7 @@ function achroot {
   Optionally you can set your keymap or font preferences in /etc/vconsole.conf, edit your /etc/mkinitcpio.conf file (after which you should run\n
   `mkinitcpio -p linux`), set the root password (by running `passwd`), set up your user accounts (by running `useradd -m -g $USERNAME`),\n
   install a desktop environment (with `pacman -S $META` where `$META` is the name of the DEs metapackage), etc.\n\n
-  An automated installer script is at /usr/local/bin/chroot-install.sh'
+  An automated configuration script is at /usr/local/bin/chroot-config.sh, a faster script (which just selects my preferences only) can be found at\n
+  /usr/local/bin/quick-config.sh'
   arch-chroot /mnt /bin/bash
 }
