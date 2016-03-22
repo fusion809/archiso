@@ -3,7 +3,7 @@ ln -s /usr/share/zoneinfo/Australia/Brisbane /etc/localtime
 /usr/bin/useradd -m -g wheel fusion809
 mv /etc/locale2.gen /etc/locale.gen
 locale-gen
-GOODS=('broadcom-wl-dkms' 'bumblebee' 'docker' 'git' 'virtualbox' 'xf86-video-intel' 'xf86-video-nouveau' 'yaourt' 'zsh')
+GOODS=('broadcom-wl-dkms' 'bumblebee' 'docker' 'git' 'linux-headers' 'virtualbox' 'xf86-video-intel' 'xf86-video-nouveau' 'yaourt' 'zsh')
 pacman -S plasma-meta kde-applications-meta $GOODS --noconfirm
 USERNAME=fusion809
 usermod --groups="bumblebee docker video vboxusers" $USERNAME
