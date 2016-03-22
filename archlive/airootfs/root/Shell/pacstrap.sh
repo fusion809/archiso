@@ -30,6 +30,7 @@ function langn {
   echo "What language locale do you wish your PC to use? e.g., This ISO uses en_US.UTF-8."
   read LOCALE
   echo "LANG=$LOCALE" >> /mnt/etc/locale.conf
+  cp -a /etc/pacman2.conf /mnt/etc/pacman.conf
 }
 
 function achroot {
