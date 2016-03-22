@@ -1,7 +1,3 @@
-function gvsh {
-	gvim -c ":call RSH()"
-}
-
 function vbash {
 	vim ~/.bashrc
 }

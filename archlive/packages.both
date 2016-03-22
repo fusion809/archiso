@@ -61,8 +61,5 @@ xl2tpd
 zd1211-firmware
 wpa_supplicant
 dialog
-git
-base-devel
 linux-headers
 broadcom-wl-dkms
-zsh
