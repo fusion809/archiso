@@ -80,13 +80,3 @@ elif [[ $GOODIES == 'list' ]]; then
     echo $i
   done
 fi
-GHUB=/home/$USERNAME/GitHub
-ARCHS=$GHUB/arch-scripts
-mkdir $GHUB
-git clone https://github.com/fusion809/arch-scripts $ARCHS
-cp -a $ARCHS/{Shell,.bashrc,.zshrc} /home/$USERNAME/
-cp -a $ARCHS/root/{Shell,.bashrc,.zshrc} /root/
-chsh -s /bin/zsh
-chsh -s /bin/zsh $USERNAME
-source ~/.bashrc
-su -c "/usr/local/bin/user-config.sh" -l $USERNAME
