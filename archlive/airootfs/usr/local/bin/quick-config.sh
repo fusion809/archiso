@@ -5,6 +5,7 @@ mv /etc/locale2.gen /etc/locale.gen
 locale-gen
 GOODS=('broadcom-wl-dkms' 'bumblebee' 'docker' 'git' 'virtualbox' 'xf86-video-intel' 'xf86-video-nouveau' 'yaourt' 'zsh')
 pacman -S plasma-meta kde-applications-meta $GOODS --noconfirm
+USERNAME=fusion809
 usermod --groups="bumblebee docker video vboxusers" $USERNAME
 GHUB=/home/$USERNAME/GitHub
 ARCHS=$GHUB/arch-scripts
