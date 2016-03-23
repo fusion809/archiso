@@ -5,5 +5,6 @@ function install-help {
   * genf
   * hostn
   * langn
+  * cpf
   * achroot'
 }
