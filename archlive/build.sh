@@ -3,7 +3,8 @@
 set -e -u
 
 iso_name=archlinux
-_gitcommit=$(git log --name-status HEAD^..HEAD | sed -n -e 's/commit //p')
+_gitcommit=fe777367668678698923714f5bc4ca788efab03d
+#$(git log --name-status HEAD^..HEAD | sed -n -e 's/commit //p')
 iso_label="ARCH_$(date +%Y%m)_${_gitcommit}"
 iso_version=$(date +%Y.%m.%d)
 install_dir=arch
