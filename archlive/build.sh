@@ -5,7 +5,7 @@ set -e -u
 iso_name=archlinux
 #$(git log --name-status HEAD^..HEAD | sed -n -e 's/commit //p')
 iso_label="ARCH_$(date +%Y%m)"
-iso_version=$(date +%Y.%m.%d.%m.%s)
+iso_version=$(date +%Y.%m.%d-%H:%M:%S)
 install_dir=arch
 work_dir=work
 out_dir=out
